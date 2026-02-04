@@ -41,3 +41,23 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+function openSkill(evt, skillName) {
+  let i, tabcontent, tabbtns;
+
+  // Hide all tab contents
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+
+  // Remove active state from all buttons
+  tabbtns = document.getElementsByClassName("tab-btn");
+  for (i = 0; i < tabbtns.length; i++) {
+    tabbtns[i].classList.remove("active");
+  }
+
+  // Show selected tab
+  document.getElementById(skillName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
