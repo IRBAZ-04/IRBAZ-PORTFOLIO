@@ -14,8 +14,22 @@
   <meta name="description" content="Add small description of yourslef.">
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="description"
+    content="Mohammed Irbaz Raihan – BCA student and web developer skilled in HTML, CSS, JavaScript, Python, SQL, and backend systems.">
+  <meta name="keywords"
+    content="Mohammed Irbaz Raihan, Irbaz Raihan, web developer portfolio, BCA student, HTML CSS JavaScript Python SQL MySQL PL SQL">
+  <meta property="og:title" content="Mohammed Irbaz Raihan Portfolio">
+  <meta property="og:description"
+    content="Web developer & BCA student specializing in frontend, backend, and database systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://your-domain.com/images/preview.png">
+  <meta property="og:url" content="https://your-domain.com">
+
+
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 
 </head>
@@ -24,11 +38,13 @@
 
   <!-- ***** Header ***** -->
 
-  <header class="header" role="banner" id="top">
+  <header class="header reveal" role="banner" id="top">
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
@@ -46,7 +62,7 @@
           <span>MOHAMMED IRBAZ RAIHAN</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in TamilNdu, India.</p>
+        <p>A Web Developer based in TamilNadu, India.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -56,7 +72,7 @@
 
     <!-- ***** Work ***** -->
 
-    <section class="work" id="work">
+    <section class="work reveal" id="work">
       <div class="row">
         <h2>My Work</h2>
         <div class="work__boxes">
@@ -149,18 +165,22 @@
 
 
     <!-- Skills -->
-    <section id="skills" class="skills-section">
-      <h2 class="about__heading">Skills</h2>
-      <div class="about__underline"></div>
+    <section id="skills" class="skills-section reveal">
       <div class="row">
 
-        <button class="tab-btn active" onclick="openSkill(event,'dev')">Development</button>
-        <button class="tab-btn" onclick="openSkill(event,'backend')">Backend & DB</button>
-        <button class="tab-btn" onclick="openSkill(event,'ai')">AI / ML</button>
-        <button class="tab-btn" onclick="openSkill(event,'tools')">Tools</button>
-        
-        
+        <h2>Skills</h2>
+
+        <!-- Tabs -->
+        <div class="skill-tabs">
+          <button class="tab-btn active" onclick="openSkill(event,'dev')">Development</button>
+          <button class="tab-btn" onclick="openSkill(event,'backend')">Backend & DB</button>
+          <button class="tab-btn" onclick="openSkill(event,'ai')">AI / ML</button>
+          <button class="tab-btn" onclick="openSkill(event,'tools')">Tools</button>
+        </div>
+
+        <!-- Content -->
         <div class="skill-content">
+
           <!-- Development -->
           <div id="dev" class="tab-content active">
 
@@ -237,15 +257,62 @@
           </div>
 
         </div>
-
-      </div>
       </div>
     </section>
+
+    <!-- ***** Education ***** -->
+
+    <section class="education reveal" id="education">
+      <div class="row">
+        <h2>Education</h2>
+
+        <div class="education__item">
+          <span class="education__year">2024 – 2027</span>
+          <h3 class="education__title">
+            <a href="https://vit.ac.in" target="_blank" class="education__link">
+              <img src="./images/client1.jpeg" class="education__logo" alt="VIT Logo">
+              Bachelor of Computer Applications (BCA)
+            </a>
+          </h3>
+          <p>VIT Vellore</p>
+
+          <p>VELLORE INSTITUTION OF TECHNOLOGY , VELLORE</p>
+        </div>
+
+        <div class="education__item">
+          <span class="education__year">9th – 12th Grade</span>
+          <h3 class="education__title">
+            <a href="https://www.facebook.com/share/1BusVsoZGd/" target="_blank" class="education__link">
+              <i class="fa-solid fa-school"></i>
+              Islamiah Higher Secondary School
+            </a>
+          </h3>
+
+          <p>PERNAMBUT</p>
+        </div>
+
+        <div class="education__item">
+          <span class="education__year">LKG – 8th Grade</span>
+          <h3 class="education__title">
+            <a href="https://www.facebook.com/share/1L8Ti12iV9/" target="_blank" class="education__link">
+              <i class="fa-solid fa-book"></i>
+              St. Paul’s Matriculation Higher Secondary School
+            </a>
+          </h3>
+
+          <p>PERNAMBUT</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
 
 
     <!-- ***** Clients ***** -->
 
-    <section class="client" id="clients">
+    <section class="client reveal" id="clients reveal">
       <div class="row">
         <h2>Client</h2>
         <div class="client__logos">
@@ -262,7 +329,7 @@
 
     <!-- ***** About ***** -->
 
-    <section class="about" id="about">
+    <section class="about reveal" id="about">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
@@ -279,7 +346,7 @@
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/irbaz1.jpg" alt="" />
+            <img class="about__photo" src="./images/irbaz.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -288,7 +355,7 @@
 
   <!-- ***** Contact ***** -->
 
-  <section class="contact" id="contact">
+  <section class="contact reveal" id="contact">
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
@@ -353,5 +420,4 @@
   </a>
   <script src="./index.js"></script>
 </body>
-
 </html>
